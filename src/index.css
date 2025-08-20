@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-red: red;
+    --color-bg-py: blue;
+}
+
+body {
+    background-color: black;
+}
