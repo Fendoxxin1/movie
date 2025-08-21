@@ -1,7 +1,6 @@
 import { memo, type FC } from "react";
 import { IMAGE_URL } from "../../const";
 import { useNavigate } from "react-router-dom";
-import { Image } from "antd";
 
 interface Props {
     data: any;
@@ -23,13 +22,15 @@ const MovieView: FC<Props> = ({ data }) => {
                         </div>
                         <div className="p-2">
                             <h3
-                                className="font-bold text-xl line-clamp-1"
+                                className="font-bold text-xl line-clamp-1 text-white"
                                 title={movie.title}
                             >
                                 {movie.title}
                             </h3>
-                            <p>⭐ {movie.vote_average}</p>
-                            <p>{movie.release_date}</p>
+                            <p className="text-white">
+                                ⭐ {movie.vote_average}
+                            </p>
+                            <p className="text-white">{movie.release_date}</p>
                         </div>
                     </div>
                 ))}
