@@ -7,7 +7,7 @@ const Header = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/80 border-b border-gray-800 flex justify-center">
+        <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/80 border-b border-gray-800 flex justify-center ">
             <div className="container max-w-[1920px] h-[80px] flex items-center justify-between px-4">
                 <NavLink to="/">
                     <img src={logo} alt="Logo" className="h-10" />
@@ -31,6 +31,9 @@ const Header = () => {
                         className="text-white hover:text-red-500 flex items-center gap-2"
                     >
                         <Search className="w-4 h-4" /> Search
+                    </NavLink>
+                    <NavLink className="text-white" to="/antd">
+                        AntD
                     </NavLink>
                 </nav>
 
@@ -69,7 +72,7 @@ const Header = () => {
                         to="/movie"
                         className="block py-2 text-white hover:text-red-500"
                     >
-                        Movie
+                        Movies
                     </NavLink>
                     <NavLink
                         to="/"
@@ -86,7 +89,6 @@ const Header = () => {
                 </div>
             )}
         </header>
-        
     );
 };
 

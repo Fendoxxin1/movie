@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useMovieDetail } from './services/useMovieDetail';
 import { IMAGE_URL } from '../../shared/const';
 import MovieView from '../../shared/components/movie-view/MovieView';
+import { Image } from 'antd';
 
 const MovieDetail = () => {
   const {id} = useParams()
@@ -34,7 +35,8 @@ const MovieDetail = () => {
       <div className='flex flex-wrap'>
         {
           imagesData?.backdrops?.slice(0, 20)?.map((item: any, inx: number) => (
-            <img loading='lazy'  key={inx} src={IMAGE_URL + item.file_path} width={180} alt="" />
+
+            <Image loading='lazy'  key={inx} src={IMAGE_URL + item.file_path} width={180} alt="" />
           ))
         }
       </div>
@@ -43,7 +45,8 @@ const MovieDetail = () => {
           creditsData?.cast?.map((user: any) => {
             const image = user.profile_path ? IMAGE_URL + user.profile_path : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png"
             return <div key={user.id}>
-              <img loading='lazy' src={image} width={80} alt="" />
+
+              <Image loading='lazy' src={image} width={80} alt=""/>
               <h3>{user.name}</h3>
               <p className='text-gray-500'>{user.character}</p>
             </div>

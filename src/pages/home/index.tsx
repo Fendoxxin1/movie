@@ -1,13 +1,12 @@
-import { memo } from 'react';
-import Hero from './components/hero';
+import { memo } from "react";
+import Hero from "./components/hero";
 
 const Home = () => {
-  return (
-    <div className="Index">
-      <h2>Home</h2>
-      <Hero/>
-    </div>
-  );
+    return (
+        <div className="Index">
+            <Hero />
+        </div>
+    );
 };
 
 export default memo(Home);
